@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today Song</title>
+</head>
+<body>
+    <iframe hidden id="api"></iframe>
+    <div id="result" style="opacity: 0;">
+        <p style="padding: 10px; font-size: 20px;">
+            <span>Твой трек это: <b id="resSong">...</b></span>
+        </p>
+    </div>
+    <div id="window">
+        <p style="font-size: 20px; padding: 10px;">
+            <span>@<b id="username">user</b>, готовы услышать ритм этого дня?</span>
+        </p>
+        <button onclick="ran(this)">Вперед!</button>
+    </div>
+    <div id="container">
+        <canvas id="canvas"></canvas>
+        <audio id="audio"></audio>
+    </div>
+    <div id="auth">
+        <span>By Wertywin2353, ver <span id="version">...</span></span>
+    </div>
+    <script src="spectrum.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

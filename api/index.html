@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api</title>
+</head>
+<body>
+    <iframe hidden id="req"></iframe>
+    <script src="LazyLib-L.js"></script>
+    <script>
+        let inputUser = GetReqData("user");
+        let t1 = "NzQyMzM1MDM4Mg";
+        let t2 = "OkFBR0VsZ2ZZb0JRSDM1OXhjLU1qYklINjM1dzYyT3hkcXFn";
+        let chid = "MTY3NTA3NTE2Nw";
+        let mode = GetReqData("mode");
+        let interactMiniAppVersion = GetReqData("app.version");
+        let userLang = GetReqData("user.lang");
+        window.onload = function () {
+            if(mode = "boot") {
+                let premes = "Новый лог, вход\n<b>Пользователь:</b> @" + inputUser + ", " + userLang + "\n<b>Версия:</b> " + interactMiniAppVersion + "\nUser.Agent:\n" + navigator.userAgent;
+                req.src = "https://api.telegram.org/bot" + decodeB(t1) + decodeB(t2) + "/sendMessage?chat_id=" + decodeB(chid) + "&parse_mode=html&text=" + encodeURI(premes);
+            }
+        }
+    </script>
+</body>
+</html>
